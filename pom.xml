@@ -35,7 +35,7 @@
   <packaging>maven-plugin</packaging>
 
   <properties>
-    <itf.version>0.9.0</itf.version>
+    <itf.version>0.11.0</itf.version>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
   </properties>
@@ -105,16 +105,6 @@
   </dependencies>
 
   <build>
-    <testResources>
-      <testResource>
-        <directory>src/test/resources</directory>
-        <filtering>false</filtering>
-      </testResource>
-      <testResource>
-        <directory>src/test/resources-its</directory>
-        <filtering>true</filtering>
-      </testResource>
-    </testResources>
     <plugins>
       <plugin>
         <groupId>org.codehaus.plexus</groupId>
@@ -131,6 +121,7 @@
             <phase>pre-integration-test</phase>
             <goals>
               <goal>install</goal>
+              <goal>resources-its</goal>
             </goals>
           </execution>
         </executions>
