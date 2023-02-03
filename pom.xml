@@ -36,7 +36,7 @@
 
   <properties>
     <maven.compiler.release>17</maven.compiler.release>
-    <itf.version>0.11.0</itf.version>
+    <itf.version>0.12.0</itf.version>
   </properties>
   <dependencyManagement>
     <dependencies>
